@@ -73,24 +73,24 @@ Move disk 1 from source A to destination B
 
 4)
      # This function is used to initialize the 
-# dictionary elements with a default value.
+     # dictionary elements with a default value.
 from collections import defaultdict
   
-# jug1 and jug2 contain the value 
-# for max capacity in respective jugs 
-# and aim is the amount of water to be measured. 
+     # jug1 and jug2 contain the value 
+     # for max capacity in respective jugs 
+     # and aim is the amount of water to be measured. 
 jug1, jug2, aim = 4, 3, 2
   
-# Initialize dictionary with 
-# default value as false.
+     # Initialize dictionary with 
+     # default value as false.
 visited = defaultdict(lambda: False)
   
-# Recursive function which prints the 
-# intermediate steps to reach the final 
-# solution and return boolean value 
-# (True if solution is possible, otherwise False).
-# amt1 and amt2 are the amount of water present 
-# in both jugs at a certain point of time.
+     # Recursive function which prints the 
+     # intermediate steps to reach the final 
+     # solution and return boolean value 
+     # (True if solution is possible, otherwise False).
+     # amt1 and amt2 are the amount of water present 
+     # in both jugs at a certain point of time.
 def waterJugSolver(amt1, amt2): 
   
     # Checks for our goal and 
