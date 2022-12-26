@@ -129,23 +129,23 @@ print("Steps: ")
   
      # Call the function and pass the
      # initial amount of water present in both jugs.
-waterJugSolver(0, 0)
-output:
-Steps: 
-0 0
-4 0
-4 3
-0 3
-3 0
-3 3
-4 2
-0 2
-True
-#travellingSalesmanProblem
-from sys import maxsize
-from itertools import permutations
-V = 4
-def travellingSalesmanProblem(graph, s):
+     waterJugSolver(0, 0)
+     output:
+     Steps: 
+     0 0
+     4 0
+     4 3
+     0 3
+     3 0
+     3 3
+     4 2
+     0 2
+     True
+     #travellingSalesmanProblem
+     from sys import maxsize
+     from itertools import permutations
+     V = 4
+     def travellingSalesmanProblem(graph, s):
     vertex = []
     for i in range(V):
         if i != s:
@@ -161,7 +161,7 @@ def travellingSalesmanProblem(graph, s):
         current_pathweight += graph[k][s]
         min_path = min(min_path, current_pathweight)
     return min_path
-if __name__ == "__main__":
+     if __name__ == "__main__":
     graph = [[0, 10, 15, 20], [10, 0, 35, 25],
             [15, 35, 0, 30], [20, 25, 30, 0]]
     s = 0
