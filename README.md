@@ -168,7 +168,7 @@ print("Steps: ")
     print(travellingSalesmanProblem(graph, s))
     output
     80
-          import csv
+8import csv
 hypo=['%','%','%','%','%','%']
 with open('Training_examples.csv') as csv_file:
     readcsv = csv.reader(csv_file, delimiter=',')
@@ -177,14 +177,14 @@ with open('Training_examples.csv') as csv_file:
     for row in readcsv:
         print(row)
         if row[len(row)-1] =='Yes':
-                  data.append(row)
+            data.append(row)
 print("\nThe positive examples are:")
 for x in data:
     print(x)
-    TotalExamples=len(data)
-    i=0
-    j=0
-    k=0
+TotalExamples=len(data)
+i=0
+j=0
+k=0
 print("\nThe steps of the Find-s algorithm are\n",hypo)
 list =[]
 p=0
@@ -192,18 +192,34 @@ d=len(data[p])-1
 for j in range(d):
     list.append(data[i][j])
     hypo=list
-    for i in range(1,TotalExamples):
-         for k in range(d):
-            if hypo[k]!=data[i][k]:
-                hypo[k]='?'
-            else:
-                hypo[k]
+for i in range(1,TotalExamples):
+    for k in range(d):
+        if hypo[k]!=data[i][k]:
+            hypo[k]='?'
+        else:
+            hypo[k]
 print(hypo)
 print("\nThe maximally specific Find-s hypothesis for the given training examples is");
 list=[]
 for i in range(d):
     list.append(hypo[i])
 print(list)
+OUTPUT
+The given training examples are:
+['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes']
+['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes']
+['Rainy', 'Cold', 'High', 'Strong', 'Warm', 'Change', 'No']
+['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']
 
+The positive examples are:
+['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes']
+['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes']
+['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']
 
+The steps of the Find-s algorithm are
+ ['%', '%', '%', '%', '%', '%']
+['Sunny', 'Warm', '?', 'Strong', '?', '?']
+
+The maximally specific Find-s hypothesis for the given training examples is
+['Sunny', 'Warm', '?', 'Strong', '?', '?']
 
