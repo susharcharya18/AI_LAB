@@ -166,60 +166,61 @@ print("Steps: ")
             [15, 35, 0, 30], [20, 25, 30, 0]]
     s = 0
     print(travellingSalesmanProblem(graph, s))
-    output
+    <B>output</B>
     80
-8import csv
-hypo=['%','%','%','%','%','%']
-with open('Training_examples.csv') as csv_file:
-    readcsv = csv.reader(csv_file, delimiter=',')
-    data=[]
-    print("\nThe given training examples are:")
-    for row in readcsv:
-        print(row)
-        if row[len(row)-1] =='Yes':
-            data.append(row)
-print("\nThe positive examples are:")
-for x in data:
-    print(x)
-TotalExamples=len(data)
-i=0
-j=0
-k=0
-print("\nThe steps of the Find-s algorithm are\n",hypo)
-list =[]
-p=0
-d=len(data[p])-1
-for j in range(d):
-    list.append(data[i][j])
-    hypo=list
-for i in range(1,TotalExamples):
-    for k in range(d):
-        if hypo[k]!=data[i][k]:
-            hypo[k]='?'
-        else:
-            hypo[k]
-print(hypo)
-print("\nThe maximally specific Find-s hypothesis for the given training examples is");
-list=[]
-for i in range(d):
-    list.append(hypo[i])
-print(list)
-OUTPUT
-The given training examples are:
-['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes']
-['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes']
-['Rainy', 'Cold', 'High', 'Strong', 'Warm', 'Change', 'No']
-['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']
+<b>8 find S</b><br>
+import csv<br>
+hypo=['%','%','%','%','%','%']<br>
+with open('Training_examples.csv') as csv_file:<br>
+    readcsv = csv.reader(csv_file, delimiter=',')<br>
+    data=[]<br>
+    print("\nThe given training examples are:")<br>
+    for row in readcsv:<br>
+        print(row)<br>
+        if row[len(row)-1] =='Yes':<br>
+            data.append(row)<br>
+print("\nThe positive examples are:")<br>
+for x in data:<br>
+    print(x)<br>
+TotalExamples=len(data)<br>
+i=0<br>
+j=0<br>
+k=0<br>
+print("\nThe steps of the Find-s algorithm are\n",hypo)<br>
+list =[]<br>
+p=0<br>
+d=len(data[p])-1<br>
+for j in range(d):<br><br>
+    list.append(data[i][j])<br><br>
+    hypo=list<br>
+for i in range(1,TotalExamples):<br>
+    for k in range(d):<br>
+        if hypo[k]!=data[i][k]:<br>
+            hypo[k]='?'<br>
+        else:<br>
+            hypo[k]<br>
+print(hypo)<br>
+print("\nThe maximally specific Find-s hypothesis for the given training examples is");<br>
+list=[]<br>
+for i in range(d):<br>
+    list.append(hypo[i])<br>
+print(list)<br>
+OUTPUT<br>
+The given training examples are:<br>
+['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes']<br>
+['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes']<br>
+['Rainy', 'Cold', 'High', 'Strong', 'Warm', 'Change', 'No']<br>
+['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']<br>
 
-The positive examples are:
-['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes']
-['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes']
-['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']
+The positive examples are:<br>
+['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes']<br>
+['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes']<br>
+['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']<br>
 
-The steps of the Find-s algorithm are
- ['%', '%', '%', '%', '%', '%']
-['Sunny', 'Warm', '?', 'Strong', '?', '?']
+The steps of the Find-s algorithm are<br>
+ ['%', '%', '%', '%', '%', '%']<br>
+['Sunny', 'Warm', '?', 'Strong', '?', '?']<br>
 
-The maximally specific Find-s hypothesis for the given training examples is
-['Sunny', 'Warm', '?', 'Strong', '?', '?']
+The maximally specific Find-s hypothesis for the given training examples is<br>
+['Sunny', 'Warm', '?', 'Strong', '?', '?']<br>
 
